@@ -1,0 +1,58 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}
+a,
+button {
+  z-index: 2 !important;
+}
+a {
+  text-decoration: none !important;
+}
+body {
+  font-family: "Open Sans", sans-serif !important;
+  padding-bottom: 100px;
+}
+body {
+  text-rendering: geometricPrecision;
+  cursor: url("./assets/pencil.png") 0 22, auto;
+}
+* {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none !important;
+}
+
+.canva {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100% !important;
+}
+.canvaBtns:active,
+.activeBtn[data-active] {
+  width: 36px !important;
+  height: 36px !important;
+}
+@media only screen and (max-width: 600px) {
+  .portfolioItem {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column !important;
+  }
+}
