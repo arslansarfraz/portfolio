@@ -6,7 +6,7 @@ export default function Copyright() {
       Go ahead, and make it your own!{" "}
       <Text
         as={Link}
-        href={"https://github.com/arslansarfraz"}
+        href={"https://github.com/arslansarfraz/portfolio/"}
         position={"relative"}
         isExternal
       >
