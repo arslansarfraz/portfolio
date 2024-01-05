@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import devImg from "../../assets/programmer.png";
+import devImg from "../../assets/men1.png";
 import boring from "../../assets/boring.png";
 import {
   Container,
@@ -94,8 +94,8 @@ export default function Header() {
                 alt={"Hero Image"}
                 fit={"cover"}
                 align={"center"}
-                w={"100%"}
-                h={"auto"}
+                w={"500px"}
+                h={"100%"}
                 src={devImg}
               />
             </Box>

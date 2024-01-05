@@ -6,15 +6,11 @@ import {
   Image,
   Text,
   Tag,
-  useColorModeValue,
   HStack,
-  SimpleGrid,
-  Flex,
   Button,
 } from "@chakra-ui/react";
 import {RiCodeView} from "react-icons/ri";
 import {AiFillEye} from "react-icons/ai";
-
 const BlogTags = props => {
   return (
     <HStack spacing={2} marginTop={props.marginTop}>
@@ -53,10 +49,10 @@ const Portfolio = ({
           href={webisteLink}
         >
           <Image
-            borderRadius='sm'
+            borderRadius='md'
             transform='scale(1.0)'
             src={imageSrc}
-            alt='some good alt text'
+            alt='my-portfolio'
             objectFit='contain'
             transition='0.3s ease-in-out'
             _hover={{

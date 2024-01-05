@@ -8,12 +8,15 @@ import PortfolioList from "./components/layout/portfolio/PortfolioList";
 import Contact from "./components/layout/Contact";
 import Copyright from "./components/layout/Copyright";
 import {motion} from "framer-motion";
+import Experience from "./components/layout/exp/Experience";
+
 function App() {
   return (
     <div>
       <Container maxW='1300px'>
         <Navbar />
         <Header />
+        <Experience />
         <PortfolioList />
         <Contact />
         <Copyright />

@@ -7,7 +7,7 @@ import {
   useColorMode,
   Heading,
 } from "@chakra-ui/react";
-import {GoMarkGithub} from "react-icons/go";
+import {FaGithub} from "react-icons/fa";
 import {MoonIcon, SunIcon} from "@chakra-ui/icons";
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
                   color='#5A6065'
                   size={"sm"}
                   mr={4}
-                  leftIcon={<GoMarkGithub />}
+                  leftIcon={<FaGithub />}
                 >
                   Github
                 </Button>
