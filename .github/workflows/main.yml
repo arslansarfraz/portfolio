@@ -1,0 +1,41 @@
+name: Build and Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name if different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build Site
+      run: |
+        # Your build commands if any
+        echo "Building site..."
+
+    - name: Deploy to GitHub Pages
+      run: |
+        mkdir docs
+        cp -r * docs/
+      # Add more deployment steps as needed
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to GitHub Pages
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add docs
+        git commit -m "Deploy to GitHub Pages"
+        git push
