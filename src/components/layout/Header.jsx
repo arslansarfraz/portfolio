@@ -65,7 +65,7 @@ export default function Header() {
             <Text as={"span"} width={"100%"} color='#5A6065'>
               My name is Arslan, and I'm a front-end developer skilled in
               creating responsive and user-friendly websites and web
-              applications. I'm proficient in <Tag>HTML</Tag>, <Tag>CSS</Tag>,{" "}
+              applications. I'm proficient in <Tag></Tag>, <Tag>CSS</Tag>,{" "}
               <Tag>JavaScript</Tag>, and various front-end frameworks, including{" "}
               <Tag>React.js</Tag>. I'm passionate about developing innovative
               and visually appealing interfaces to enhance user experience.
