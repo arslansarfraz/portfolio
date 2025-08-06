@@ -52,10 +52,10 @@ export default function Header() {
                 zIndex: -1,
               }}
             >
-              Front-End
+             Arslan Full-Stack & 
             </Text>
             <br />
-            <Text as={"span"}>Developer.</Text>
+            <Text as={"span"}>AI Engineer.</Text>
           </Heading>
 
           <Stack
@@ -63,12 +63,10 @@ export default function Header() {
             direction={{base: "column", sm: "row"}}
           >
             <Text as={"span"} width={"100%"} color='#5A6065'>
-              My name is Arslan, and I'm a front-end developer skilled in
-              creating responsive and user-friendly websites and web
-              applications. I'm proficient in <Tag>HTML</Tag>, <Tag>CSS</Tag>,{" "}
-              <Tag>JavaScript</Tag>, and various front-end frameworks, including{" "}
-              <Tag>React.js</Tag>. I'm passionate about developing innovative
-              and visually appealing interfaces to enhance user experience.
+              I’m a software engineer with 7+ years of experience crafting end-to-end web applications
+             and AI-powered features. My expertise spans <Tag>Javascript</Tag>, <Tag>Node.js</Tag>, <Tag>Python</Tag> (Flask/FastAPI), and cloud-native microservices on AWS. 
+              I love turning product ideas into robust, user-centric experiences—whether 
+              that’s a real-time dashboard, an LLM-driven chatbot, or a high-throughput data pipeline.
             </Text>
           </Stack>
         </Stack>
