@@ -66,7 +66,7 @@ export default function Header() {
               I’m a software engineer with 7+ years of experience crafting end-to-end web applications
              and AI-powered features. My expertise spans <Tag>Javascript</Tag>, <Tag>Node.js</Tag>, <Tag>Python</Tag> (Flask/FastAPI), and cloud-native microservices on AWS. 
               I love turning product ideas into robust, user-centric experiences—whether 
-              that’s a real-time dashboard, an LLM-driven chatbot, or a high-throughput data pipeline.
+              that is a real-time dashboard, an LLM-driven chatbot, or a high-throughput data pipeline.
             </Text>
           </Stack>
         </Stack>
