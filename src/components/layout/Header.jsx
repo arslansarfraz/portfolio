@@ -64,7 +64,7 @@ export default function Header() {
           >
             <Text as={"span"} width={"100%"} color='#5A6065'>
               I’m a software engineer with 7+ years of experience crafting end-to-end web applications
-             and AI-powered features. My expertise spans <Tag>Javascript</Tag>, <Tag>Node.js</Tag>, <Tag>Python</Tag> (Flask/FastAPI), and cloud-native microservices on AWS. 
+             and AI-powered features. My expertise spans <Tag>Javascript</Tag>, <Tag>Node.js</Tag>, <Tag>Python</Tag> (Flask/FastAPI), and cloud native microservices on AWS. 
               I love turning product ideas into robust, user-centric experiences—whether 
               that is a real-time dashboard, an LLM-driven chatbot, or a high-throughput data pipeline.
             </Text>
