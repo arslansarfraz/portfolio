@@ -81,25 +81,27 @@ const Portfolio = ({
           </Link>
         </Heading>
         <BlogTags tags={tag} />
-        <Text as='p' mt={5} fontSize='sm' color='#5A6065' fontWeight={400}>
+        <Text as='p' mt={5} fontSize='sm' color='mutedText' fontWeight={400}>
           {websiteDesc}
         </Text>
         <Box mt={5}>
-          <Link href={githubLink} isExternal={true}>
-            <Button
-              variant={"solid"}
-              color='#5A6065'
-              size={"sm"}
-              mr={4}
-              leftIcon={<RiCodeView />}
-            >
-              Code
-            </Button>
-          </Link>
+          {githubLink && (
+            <Link href={githubLink} isExternal={true}>
+              <Button
+                variant={"solid"}
+                color='mutedText'
+                size={"sm"}
+                mr={4}
+                leftIcon={<RiCodeView />}
+              >
+                Code
+              </Button>
+            </Link>
+          )}
           <Link href={webisteLink} isExternal={true} mt={5}>
             <Button
               variant={"solid"}
-              color='#5A6065'
+              color='mutedText'
               size={"sm"}
               mr={4}
               leftIcon={<AiFillEye />}

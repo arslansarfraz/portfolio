@@ -30,7 +30,7 @@ export default function Navbar() {
               <Link href='https://github.com/arslansarfraz' isExternal={true}>
                 <Button
                   variant={"solid"}
-                  color='#5A6065'
+                  color='mutedText'
                   size={"sm"}
                   mr={4}
                   leftIcon={<FaGithub />}

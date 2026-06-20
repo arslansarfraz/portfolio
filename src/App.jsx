@@ -6,7 +6,6 @@ import Header from "./components/layout/Header";
 import {useEffect, useState} from "react";
 import PortfolioList from "./components/layout/portfolio/PortfolioList";
 import Contact from "./components/layout/Contact";
-import Copyright from "./components/layout/Copyright";
 import {motion} from "framer-motion";
 import Experience from "./components/layout/exp/Experience";
 
@@ -19,7 +18,6 @@ function App() {
         <Experience />
         <PortfolioList />
         <Contact />
-        <Copyright />
       </Container>
       <Canvas />
       <ColorPalette />

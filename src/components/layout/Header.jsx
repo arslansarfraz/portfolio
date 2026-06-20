@@ -52,23 +52,23 @@ export default function Header() {
                 zIndex: -1,
               }}
             >
-              Front-End
+              Full Stack
             </Text>
             <br />
-            <Text as={"span"}>Developer.</Text>
+            <Text as={"span"}>Developer | AI Engineer.</Text>
           </Heading>
 
           <Stack
             spacing={{base: 4, sm: 6}}
             direction={{base: "column", sm: "row"}}
           >
-            <Text as={"span"} width={"100%"} color='#5A6065'>
-              My name is Arslan, and I'm a front-end developer skilled in
-              creating responsive and user-friendly websites and web
-              applications. I'm proficient in <Tag></Tag>, <Tag>CSS</Tag>,{" "}
-              <Tag>JavaScript</Tag>, and various front-end frameworks, including{" "}
-              <Tag>React.js</Tag>. I'm passionate about developing innovative
-              and visually appealing interfaces to enhance user experience.
+            <Text as={"span"} width={"100%"} color='mutedText'>
+              My name is Arslan, a developer with 5+ years of experience
+              building software that's both smart and reliable. I design and
+              build Agentic AI and RAG systems using <Tag>LangChain</Tag>,{" "}
+              <Tag>LangGraph</Tag>, and vector stores, and craft full-stack
+              platforms with <Tag>React.js</Tag> and <Tag>Node.js</Tag>. I'm
+              passionate about connecting AI with real-world applications.
             </Text>
           </Stack>
         </Stack>

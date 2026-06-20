@@ -2,7 +2,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
 }
-body {
+body.draw-mode {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -27,9 +27,11 @@ body {
 }
 body {
   text-rendering: geometricPrecision;
+}
+body.draw-mode {
   cursor: url("./assets/pencil.png") 0 22, auto;
 }
-* {
+body.draw-mode * {
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;

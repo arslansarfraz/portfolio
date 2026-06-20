@@ -1,31 +1,38 @@
 // ExpData.js
 import {
   FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaBootstrap,
+  FaNodeJs,
+  FaDocker,
+  FaAws,
   FaGithub,
-  FaFigma,
-  FaVuejs,
+  FaPython,
+  FaBrain,
+  FaDatabase,
+  FaProjectDiagram,
+  FaSearch,
 } from "react-icons/fa";
-import {IoLogoJavascript} from "react-icons/io";
-import {SiTailwindcss, SiChakraui} from "react-icons/si";
-
-import {TbSeo} from "react-icons/tb";
+import {SiOpenai, SiGraphql, SiD3Dotjs} from "react-icons/si";
 
 export const ExpData = [
   {
-    company: "Hubble42 Inc",
-    jobtitle: "Frontend Developer | Feb 2023 - Present",
-    desc: "Upgraded websites by integrating innovative features using JavaScript, React, and Next.js. Led projects aimed at introducing new functionalities and ensuring smooth behind-the-scenes operations. Crafted user-friendly, responsive designs optimized for diverse browsers, enhancing overall user experience and maintaining consistency across platforms.",
-    iconNames: [FaReact, FaVuejs, SiTailwindcss, SiChakraui, FaGithub],
-    label: ["React Js", "Vue JS", "TailwindCSS", "ChakraUI", "Git"],
+    company: "Hubble42 Inc.",
+    jobtitle: "Sr. Full Stack Developer – AI Developer | Mar 2021 - Present",
+    desc: "Spearheaded the development of Agentic AI platforms with LangChain, LangGraph, and vector stores. Designed and deployed RAG-based assistants with embeddings, semantic retrieval, and context-aware reasoning. Integrated LLM APIs (OpenAI, Cohere) into real-time platforms, built scalable microservices with Docker + AWS ECS, and exposed GraphQL/REST APIs for multi-tenant client platforms.",
+    iconNames: [FaBrain, FaProjectDiagram, SiOpenai, FaDocker, FaAws, SiGraphql],
+    label: ["Agentic AI", "LangGraph", "OpenAI", "Docker", "AWS", "GraphQL"],
   },
   {
-    company: "TechnoDesert",
-    jobtitle: "Frontend Developer | Sep 2022 - Jun 2023",
-    desc: "Implemented automated front-end tests for seamless apps updates, utilizing HTML5 CSS3 and JS for designing, developing, and debugging web applications. Managed code repositories and continuous integration processes, improving website analytics and enhancing end-user feedback.",
-    iconNames: [FaHtml5, FaCss3Alt, IoLogoJavascript, FaBootstrap, FaFigma],
-    label: ["HTML", "CSS", "Javascript", "Bootstrap", "Figma"],
+    company: "Turing",
+    jobtitle: "Software Engineer – AI/NLP Focus | May 2023 - May 2026",
+    desc: "Built and optimized retrieval-augmented generation (RAG) pipelines for summarization, semantic search, and knowledge retrieval. Developed memory modules and function-calling APIs for contextual continuity, and designed evaluation frameworks for hallucination detection. Ran prompt engineering and fine-tuning across GPT-3, GPT-Neo, and Hugging Face models, and built React.js + D3.js dashboards to monitor LLM performance.",
+    iconNames: [FaSearch, FaBrain, FaReact, SiD3Dotjs, FaPython],
+    label: ["RAG", "LLMs", "React.js", "D3.js", "Python"],
+  },
+  {
+    company: "Contour Software Pvt. Ltd",
+    jobtitle: "Full Stack Developer | Mar 2020 - Jan 2021",
+    desc: "Built production-ready applications with React.js on the frontend and Node.js on the backend, backed by SQL-driven data models. Designed authentication and data pipelines for secure, scalable client operations, deployed apps in Dockerized environments with CI/CD workflows, and collaborated with UI/UX teams to deliver responsive, high-performance experiences.",
+    iconNames: [FaReact, FaNodeJs, FaDatabase, FaDocker, FaGithub],
+    label: ["React.js", "Node.js", "SQL", "Docker", "Git"],
   },
 ];

@@ -6,8 +6,33 @@ export const CanvasProvider = ({children}) => {
   const [selectedColor, setSelectedColor] = useState("black");
 
   const [isDrawing, setIsDrawing] = useState(false);
+  const [isDrawMode, setIsDrawMode] = useState(false);
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+
+  // Toggle a body class so the pencil cursor / no-select only apply while drawing.
+  useEffect(() => {
+    document.body.classList.toggle("draw-mode", isDrawMode);
+    return () => document.body.classList.remove("draw-mode");
+  }, [isDrawMode]);
+
+  const toggleDrawMode = () => setIsDrawMode(prev => !prev);
+
+  const clearCanvas = () => {
+    const canvas = canvasRef.current;
+    if (!canvas || !contextRef.current) return;
+    contextRef.current.clearRect(0, 0, canvas.width, canvas.height);
+  };
+
+  // Works for mouse, touch and stylus (pointer) events.
+  const getCoords = nativeEvent => {
+    if (typeof nativeEvent.offsetX === "number") {
+      return {x: nativeEvent.offsetX, y: nativeEvent.offsetY};
+    }
+    const rect = canvasRef.current.getBoundingClientRect();
+    const point = nativeEvent.touches ? nativeEvent.touches[0] : nativeEvent;
+    return {x: point.clientX - rect.left, y: point.clientY - rect.top};
+  };
 
   useEffect(() => {
     prepareCanvas();
@@ -46,23 +71,25 @@ export const CanvasProvider = ({children}) => {
   };
 
   const startDrawing = ({nativeEvent}) => {
-    const {offsetX, offsetY} = nativeEvent;
+    if (!isDrawMode) return;
+    const {x, y} = getCoords(nativeEvent);
     contextRef.current.beginPath();
-    contextRef.current.moveTo(offsetX, offsetY);
+    contextRef.current.moveTo(x, y);
     setIsDrawing(true);
   };
 
   const finishDrawing = () => {
+    if (!isDrawing) return;
     contextRef.current.closePath();
     setIsDrawing(false);
   };
 
   const draw = ({nativeEvent}) => {
-    if (!isDrawing) {
+    if (!isDrawing || !isDrawMode) {
       return;
     }
-    const {offsetX, offsetY} = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
+    const {x, y} = getCoords(nativeEvent);
+    contextRef.current.lineTo(x, y);
     contextRef.current.stroke();
   };
 
@@ -77,6 +104,9 @@ export const CanvasProvider = ({children}) => {
         draw,
         selectedColor,
         setSelectedColor,
+        isDrawMode,
+        toggleDrawMode,
+        clearCanvas,
       }}
     >
       {children}

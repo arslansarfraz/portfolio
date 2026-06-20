@@ -14,7 +14,7 @@ import {
   TagLeftIcon,
   Text,
 } from "@chakra-ui/react";
-import {ExpData} from "./expData";
+import {ExpData} from "./ExpData";
 
 export default function Experience() {
   return (
@@ -26,7 +26,7 @@ export default function Experience() {
               <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
                 <Box>
                   <Heading size='sm'>{value.company}</Heading>
-                  <Text fontSize='sm' color='#5A6065'>
+                  <Text fontSize='sm' color='mutedText'>
                     {value.jobtitle}
                   </Text>
                 </Box>
@@ -34,32 +34,34 @@ export default function Experience() {
             </Flex>
           </CardHeader>
           <CardBody>
-            <Text as='p' mt={1} fontSize='sm' color='#5A6065' fontWeight={400}>
+            <Text as='p' mt={1} fontSize='sm' color='mutedText' fontWeight={400}>
               {value.desc}
             </Text>
           </CardBody>
-          <CardFooter
-            justify='space-between'
-            flexWrap='wrap'
-            sx={{
-              "& > button": {
-                minW: "136px",
-              },
-            }}
-          >
-            <Stack direction={["column", "row"]} spacing={4}>
+          <CardFooter pt={0}>
+            <HStack
+              spacing={3}
+              w='100%'
+              overflowX='auto'
+              sx={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                "&::-webkit-scrollbar": {display: "none"},
+              }}
+            >
               {value.iconNames.map((icons, iconIndex) => (
                 <Tag
                   size='sm'
                   variant='subtle'
                   colorScheme='gray'
                   key={iconIndex}
+                  flexShrink={0}
                 >
                   <TagLeftIcon boxSize='12px' as={icons} />
                   <TagLabel>{value.label[iconIndex]}</TagLabel>
                 </Tag>
               ))}
-            </Stack>
+            </HStack>
           </CardFooter>
         </Card>
       ))}
